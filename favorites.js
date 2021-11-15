@@ -18,7 +18,7 @@ const displayFavorites = () => {
       let imageLink = document.createElement("a");
       imageLink.classList.add("image-link");
       imageLink.setAttribute("target", "_blank");
-      imageLink.setAttribute("href", favoritesList[i].link);
+      imageLink.setAttribute("href", favoritesList[i].fullImageLink);
       let image = document.createElement("img");
       image.setAttribute("src", favoritesList[i].link);
       image.setAttribute("title", "View Full Image");
@@ -77,7 +77,6 @@ const removeFavorite = (elem) => {
 
   cards = document.querySelectorAll(".card");
   let storedFavorites = JSON.parse(localStorage.getItem("favorites"));
-  console.log(storedFavorites);
 
   for (let i = 0; i < storedFavorites.length; i++) {
     if ((storedFavorites[i].title = elemTitle)) {
@@ -85,8 +84,7 @@ const removeFavorite = (elem) => {
       break;
     }
   }
-  console.log("out");
-  // storedFavorites.splice(index, 1);
+
   localStorage.setItem("favorites", JSON.stringify(storedFavorites));
   elem.parentNode.parentNode.remove();
   if (storedFavorites.length < 1) {

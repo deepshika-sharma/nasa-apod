@@ -6,175 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NASA APOD</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov"
+    />
   </head>
   <body>
+    <!-- Loader -->
+    <div class="loader">
+      <img src="rocket.svg" alt="Rocket Loading Animation" />
+    </div>
+    <!-- Container -->
     <div class="container">
-      <a id="favorites" href="favorites.html">Favorites</a>
-      <span id="dot"></span>
-      <a id="load-more" href="#">Load More</a>
-      <div class="card">
-        <div class="image">
-          <a class="image-link" target="_blank" href="">
-            <img title="View Full Image" src="" alt="nasa-image" />
-          </a>
-        </div>
-        <div class="info">
-          <h3 class="title"></h3>
-          <a href="" class="add-favorites">Add to Favorites</a>
-          <p class="description"></p>
-        </div>
-        <div class="copyright-details">
-          <span class="date"></span>
-          <span class="copyright"></span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <a class="image-link" target="_blank" href="">
-            <img title="View Full Image" src="" alt="nasa-image" />
-          </a>
-        </div>
-        <div class="info">
-          <h3 class="title"></h3>
-          <a href="" class="add-favorites">Add to Favorites</a>
-          <p class="description"></p>
-        </div>
-        <div class="copyright-details">
-          <span class="date"></span>
-          <span class="copyright"></span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <a class="image-link" target="_blank" href="">
-            <img title="View Full Image" src="" alt="nasa-image" />
-          </a>
-        </div>
-        <div class="info">
-          <h3 class="title"></h3>
-          <a href="" class="add-favorites">Add to Favorites</a>
-          <p class="description"></p>
-        </div>
-        <div class="copyright-details">
-          <span class="date"></span>
-          <span class="copyright"></span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <a class="image-link" target="_blank" href="">
-            <img title="View Full Image" src="" alt="nasa-image" />
-          </a>
-        </div>
-        <div class="info">
-          <h3 class="title"></h3>
-          <a href="" class="add-favorites">Add to Favorites</a>
-          <p class="description"></p>
-        </div>
-        <div class="copyright-details">
-          <span class="date"></span>
-          <span class="copyright"></span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <a class="image-link" target="_blank" href="">
-            <img title="View Full Image" src="" alt="nasa-image" />
-          </a>
-        </div>
-        <div class="info">
-          <h3 class="title"></h3>
-          <a href="" class="add-favorites">Add to Favorites</a>
-          <p class="description"></p>
-        </div>
-        <div class="copyright-details">
-          <span class="date"></span>
-          <span class="copyright"></span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <a class="image-link" target="_blank" href="">
-            <img title="View Full Image" src="" alt="nasa-image" />
-          </a>
-        </div>
-        <div class="info">
-          <h3 class="title"></h3>
-          <a href="" class="add-favorites">Add to Favorites</a>
-          <p class="description"></p>
-        </div>
-        <div class="copyright-details">
-          <span class="date"></span>
-          <span class="copyright"></span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <a class="image-link" target="_blank" href="">
-            <img title="View Full Image" src="" alt="nasa-image" />
-          </a>
-        </div>
-        <div class="info">
-          <h3 class="title"></h3>
-          <a href="#" class="add-favorites">Add to Favorites</a>
-          <p class="description"></p>
-        </div>
-        <div class="copyright-details">
-          <span class="date"></span>
-          <span class="copyright"></span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <a class="image-link" target="_blank" href="">
-            <img title="View Full Image" src="" alt="nasa-image" />
-          </a>
-        </div>
-        <div class="info">
-          <h3 class="title"></h3>
-          <a href="#" class="add-favorites">Add to Favorites</a>
-          <p class="description"></p>
-        </div>
-        <div class="copyright-details">
-          <span class="date"></span>
-          <span class="copyright"></span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <a class="image-link" target="_blank" href="">
-            <img title="View Full Image" src="" alt="nasa-image" />
-          </a>
-        </div>
-        <div class="info">
-          <h3 class="title"></h3>
-          <a href="#" class="add-favorites">Add to Favorites</a>
-          <p class="description"></p>
-        </div>
-        <div class="copyright-details">
-          <span class="date"></span>
-          <span class="copyright"></span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="image">
-          <a class="image-link" target="_blank" href="">
-            <img title="View Full Image" src="" alt="nasa-image" />
-          </a>
-        </div>
-        <div class="info">
-          <h3 class="title"></h3>
-          <a href="#" class="add-favorites">Add to Favorites</a>
-          <p class="description"></p>
-        </div>
-        <div class="copyright-details">
-          <span class="date"></span>
-          <span class="copyright"></span>
-        </div>
-      </div>
+      <!-- Navigation -->
+      <nav>
+        <a id="favorites" href="favorites.html">Favorites</a>
+        <span id="dot">•&nbsp;</span>
+        <a id="load-more" href="">Load More</a>
+      </nav>
+      <div class="cards-container"></div>
     </div>
     <div class="added">
-      <p>ADDED!</p>
+      <h1>ADDED!</h1>
     </div>
     <script src="script.js"></script>
   </body>
