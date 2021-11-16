@@ -1,7 +1,11 @@
 const favoritesContainer = document.querySelector(".favorites-container");
 const cardsContainer = document.querySelector(".cards-container");
+const loader = document.querySelector(".loader");
 
 let cards;
+// Show Loader
+loader.style.display = "flex";
+favoritesContainer.style.display = "none";
 
 // Displaying Favorites Page
 const displayFavorites = () => {
@@ -38,7 +42,6 @@ const displayFavorites = () => {
       removeFavoriteLink.classList.add("remove-favorite");
       removeFavoriteLink.textContent = "Remove Favorite";
       removeFavoriteLink.addEventListener("click", (e) => {
-        // e.preventDefault();
         removeFavorite(e.target);
       });
       // -- description
@@ -68,6 +71,9 @@ const displayFavorites = () => {
       favoritesContainer.appendChild(cardsContainer);
     }
   }
+  // Hiding Loader
+  loader.style.display = "none";
+  favoritesContainer.style.display = "inline-block";
 };
 
 // Remove Favorite

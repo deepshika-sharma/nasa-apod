@@ -30,7 +30,6 @@ const updateDOM = () => {
       let imgDiv = document.createElement("div");
       imgDiv.classList.add("image");
       // for images
-
       let imgLink = document.createElement("a");
       imgLink.classList.add("image-link");
       imgLink.setAttribute("target", "_blank");
@@ -73,21 +72,27 @@ const updateDOM = () => {
       if (resultsArray[i].copyright) {
         copyright.textContent = resultsArray[i].copyright;
       } else {
-        copyright.textContent = "Unknown";
+        copyright.textContent = "";
       }
       copyrightDiv.append(date, copyright);
       cardDiv.appendChild(copyrightDiv);
       cardsContainer.appendChild(cardDiv);
     }
   }
+  // Hiding loader
+  loader.style.display = "none";
+  container.style.display = "inline-block";
 };
 
 // NASA API
 const apiKey = "DEMO_KEY";
-const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=Bc8hTpRgWJK8kFV7gFlJTVQsAa8huNjE2tZbGOwd&count=10`;
+const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=10`;
 const apiCount = 10;
 
 const nasa = async () => {
+  // Show Loader
+  loader.style.display = "flex";
+  container.style.display = "none";
   // getting ten pictures
   try {
     const response = await fetch(apiUrl);

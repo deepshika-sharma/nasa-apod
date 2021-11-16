@@ -34,18 +34,14 @@ body {
 /* Container */
 .container,
 .favorites-container {
-  /* margin-top: 30px; */
-  /* border: 3px solid red; */
   text-align: center;
   width: 50vw;
-  /* display: none; */
 }
 
 nav {
   position: fixed;
-  /* border: 3px solid yellow; */
   z-index: 3;
-  padding: 20px 0;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,6 +57,7 @@ nav {
 #load-more {
   color: cornflowerblue;
   user-select: none;
+  font-size: 20px;
 }
 
 #favorites:hover,
@@ -71,7 +68,6 @@ nav {
 #dot {
   font-size: 40px;
   display: inline-block;
-  /* border: 3px solid brown; */
   margin-left: 10px;
 }
 
@@ -94,7 +90,6 @@ a:hover {
 .cards-container {
   position: relative;
   top: 90px;
-  /* border: 3px solid green; */
 }
 .card {
   background: white;
@@ -138,10 +133,10 @@ video {
   border-radius: 5px;
   padding: 5px;
   border: none;
-  /* box-shadow: 5px 5px 20px 0 black; */
   visibility: hidden;
 }
 
+/* Media Queries */
 @media screen and (max-width: 800px) {
   .container,
   .favorites-container {
